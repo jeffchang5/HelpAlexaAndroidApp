@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id ="@+id/task"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="Hello"
+        android:textSize="21sp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+
+/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_alignParentStart="true"
+            android:id="@+id/patient_name"
+            android:ellipsize="end"
+
+            android:text="Filler App"
+            />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/date_and_time"
+            android:ellipsize="end"
+            android:text="November 13th"/>
+
+
+    </RelativeLayout>
+</LinearLayout>
