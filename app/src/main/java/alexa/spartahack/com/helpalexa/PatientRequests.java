@@ -8,29 +8,31 @@ import java.util.Date;
 public class PatientRequests {
     private Date mDate;
     private String mName;
-    private String Task;
+    private String mTask;
 
-    public Date getmDate() {
+    public Date getDate() {
         return mDate;
     }
 
-    public void setmDate(Date mDate) {
+    public void setDate(Date mDate) {
         this.mDate = mDate;
     }
 
-    public String getmName() {
+    public String getName() {
         return mName;
     }
 
-    public void setmName(String mName) {
+    public void setName(String mName) {
         this.mName = mName;
     }
 
     public String getTask() {
-        return Task;
+        return mTask;
     }
 
     public void setTask(String task) {
-        Task = task;
+        task = mTask;
     }
+
+
 }

@@ -15,25 +15,30 @@ import java.util.Map;
 /**
  * Created by jeffrey on 2/28/16.
  */
-interface AdapterListener {
-    public void updateAdapter();
-}
+
 public class FireBaseHelper {
+    ArrayList<PatientRequests> mArrayList = new ArrayList<PatientRequests>();
     Firebase firebaseRef;
-    Map<String, String> mStringMap;
     public FireBaseHelper(Context c) {
         Log.v("TAG", "start of Firebase Helper");
         Firebase.setAndroidContext(c);
         firebaseRef = new Firebase("https://alexahelp.firebaseio.com/");
-        firebaseRef.child("alexahelp").addValueEventListener(new ValueEventListener() {
+        PatientRequests patientRequests = new PatientRequests();
+        firebaseRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
-                Log.v("TAG", "On Data Change");
-                Map<String, String> mStringMap = (Map<String, String>) snapshot.getValue();
+                System.out.println("There are " + snapshot.getChildrenCount() + " blog posts");
+                int i = 0;
+                for (DataSnapshot postSnapshot: snapshot.getChildren()) {
 
+                    PatientRequests mPatientRequests = postSnapshot.getValue(PatientRequests.class);
+                    mArrayList.add(mPatientRequests);
+
+
+                }
             }
             @Override public void onCancelled(FirebaseError error) {
-                Log.v("TAG","Firebase is cancelled.");
+                Log.v("TAG","Firebase is c ancelled.");
 
             }
         });

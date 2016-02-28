@@ -63,8 +63,8 @@ public class PatientViewAdapter extends RecyclerView.Adapter<PatientViewAdapter.
     public void updateListItem(PatientViewHolder holder, int position) {
 
         PatientRequests mPatientRequests = mPatientArrayList.get(position);
-        holder.vName.setText(mPatientRequests.getmName());
-        holder.vDate.setText(mPatientRequests.getmDate().toString());
+        holder.vName.setText(mPatientRequests.getName());
+        holder.vDate.setText(mPatientRequests.getDate().toString());
         holder.vTask.setText(mPatientRequests.getTask());
 
     }
